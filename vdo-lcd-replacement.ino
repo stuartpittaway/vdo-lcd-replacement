@@ -32,7 +32,7 @@
 //E=n/c
 //F=n/c
 
-uint8_t vdoBitmaps[] PROGMEM   =
+const uint8_t vdoBitmaps[] PROGMEM   =
 {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x18, 0x38, 0xF8, 0xF8, 
   0xF8, 0xF8, 0xF8, 0xF0, 0xC0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -111,7 +111,7 @@ void setup()
   lcd.clear();
   lcd.setCursor(0, yoffset);
   lcd.draw(vdoBitmaps, vdoWidthPixels, vdoHeightPixels);
-  delay(25000);
+  delay(3000);
   lcd.clear();
 
   //Draw the 8888888 on the display
@@ -212,7 +212,7 @@ void receiveEvent(int bytes)
 void loop()
 {
   //Do nothing!
-  delay(5000);
+  delay(500);
 }
 
 void drawVLine(uint8_t x, uint8_t y, uint8_t h) {
